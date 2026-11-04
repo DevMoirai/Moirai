@@ -1,0 +1,147 @@
+/* Moirai OBS - Yönetici Paneli */
+
+.root {
+    -fx-font-family: "Inter", "Segoe UI", "Noto Sans", "DejaVu Sans", sans-serif;
+    -fx-font-size: 13px;
+    -color-primary: #2f5be7;
+    -color-sidebar: #1e293b;
+    -color-text: #1e293b;
+    -color-muted: #64748b;
+    -color-border: #e2e8f0;
+    -color-page: #f4f6fb;
+}
+
+.root-pane { -fx-background-color: -color-page; }
+
+/* Sol menü */
+.sidebar {
+    -fx-background-color: -color-sidebar;
+    -fx-padding: 20 12 16 12;
+}
+.logo {
+    -fx-background-color: -color-primary;
+    -fx-background-radius: 9;
+}
+.logo .label {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+.brand-title { -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; }
+.brand-subtitle { -fx-text-fill: #94a3b8; -fx-font-size: 12px; }
+.file-name { -fx-text-fill: #e2e8f0; -fx-font-size: 12px; -fx-font-weight: bold; }
+
+.sidebar-separator .line {
+    -fx-border-color: #334155;
+    -fx-border-width: 1 0 0 0;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+    -fx-text-fill: #cbd5e1;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 12 10 12;
+    -fx-pref-height: 40px;
+    -fx-cursor: hand;
+}
+.nav-button:hover { -fx-background-color: #2b3a50; }
+.nav-button.active { -fx-background-color: -color-primary; -fx-text-fill: white; }
+.nav-button:focused { -fx-background-insets: 0; }
+
+.nav-icon { -fx-stroke: #cbd5e1; }
+.nav-button.active .nav-icon { -fx-stroke: white; }
+
+/* Sayfa */
+.page { -fx-padding: 24; -fx-background-color: -color-page; }
+.page-scroll, .page-scroll > .viewport {
+    -fx-background-color: -color-page;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+.page-title { -fx-text-fill: -color-text; -fx-font-size: 22px; -fx-font-weight: bold; }
+.page-subtitle { -fx-text-fill: -color-muted; -fx-font-size: 13px; }
+
+/* Kartlar */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 10;
+    -fx-padding: 16;
+}
+.card-title { -fx-text-fill: -color-text; -fx-font-size: 13.5px; -fx-font-weight: bold; }
+
+.stat-label { -fx-text-fill: #475569; -fx-font-size: 12px; }
+.stat-value { -fx-text-fill: -color-text; -fx-font-size: 28px; -fx-font-weight: bold; }
+.stat-link {
+    -fx-text-fill: -color-primary;
+    -fx-font-size: 12px;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-underline: false;
+}
+.stat-link:hover { -fx-underline: true; }
+.stat-link:visited { -fx-text-fill: -color-primary; }
+
+/* Şube doluluğu */
+.branch-code { -fx-text-fill: -color-text; -fx-font-size: 12.5px; -fx-font-weight: bold; }
+.branch-name { -fx-text-fill: #475569; -fx-font-size: 12.5px; }
+.branch-count { -fx-text-fill: #475569; -fx-font-size: 12px; }
+
+.fill-bar { -fx-pref-height: 8px; -fx-min-height: 8px; -fx-max-height: 8px; }
+.fill-bar > .track {
+    -fx-background-color: #e2e4ea;
+    -fx-background-radius: 4;
+    -fx-background-insets: 0;
+}
+.fill-bar > .bar {
+    -fx-background-color: -color-primary;
+    -fx-background-radius: 4;
+    -fx-background-insets: 0;
+    -fx-padding: 4;
+}
+.fill-bar.full > .bar { -fx-background-color: #dc2626; }
+
+/* Uyarılar */
+.alert-row {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 8;
+    -fx-padding: 11 12 11 12;
+}
+.alert-text { -fx-text-fill: #334155; -fx-font-size: 12.5px; }
+.dot-warning { -fx-fill: #d97706; }
+.dot-critical { -fx-fill: #dc2626; }
+
+/* Hızlı işlemler */
+.quick-button {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-border-color: -color-primary;
+    -fx-border-radius: 6;
+    -fx-text-fill: -color-primary;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+    -fx-padding: 9 14 9 14;
+    -fx-cursor: hand;
+}
+.quick-button:hover { -fx-background-color: #eef2ff; }
+
+/* Durum çubuğu */
+.status-bar {
+    -fx-background-color: white;
+    -fx-border-color: -color-border transparent transparent transparent;
+    -fx-padding: 8 24 8 24;
+}
+.status-bar .label { -fx-text-fill: #475569; -fx-font-size: 12px; }
+.status-dot { -fx-fill: #64748b; }
+
+/* Kaydırma çubuğu */
+.page-scroll .scroll-bar:vertical { -fx-background-color: transparent; -fx-pref-width: 10; }
+.page-scroll .scroll-bar:vertical .track { -fx-background-color: transparent; -fx-border-color: transparent; }
+.page-scroll .scroll-bar:vertical .thumb { -fx-background-color: #cbd5e1; -fx-background-radius: 5; }
+.page-scroll .scroll-bar .increment-button,
+.page-scroll .scroll-bar .decrement-button { -fx-padding: 0; -fx-background-color: transparent; }
+.page-scroll .scroll-bar .increment-arrow,
+.page-scroll .scroll-bar .decrement-arrow { -fx-padding: 0; -fx-shape: none; }
